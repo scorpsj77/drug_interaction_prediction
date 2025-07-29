@@ -2,15 +2,15 @@
 
 import pandas as pd
 
-# Load the positive and negative drug interactions datasets
-neg = 'https://media.githubusercontent.com/media/TIML-Group/HODDI/refs/heads/main/dataset/HODDI/Merged_Dataset/neg.csv'
-pos = 'https://media.githubusercontent.com/media/TIML-Group/HODDI/refs/heads/main/dataset/HODDI/Merged_Dataset/pos.csv'
+# Load the positive and negative drug interactions datasets from HODDI
+neg = 'path_to_neg_interaction_dataset'  # --> Change to your path
+pos = 'path_to_pos_interaction_dataset'  # --> Change to your path
 
 dfn = pd.read_csv(neg)
 dfp = pd.read_csv(pos)
 
-# Load the dictionary of drugs
-dictionary = 'https://media.githubusercontent.com/media/TIML-Group/HODDI/refs/heads/main/dataset/dictionary/Drugbank_ID_SMILE_all_structure%20links.csv'
+# Load the dictionary of drugs from HODDI
+dictionary = 'path_to_dictionary'        # --> Change to your path
 
 df_dict = pd.read_csv(dictionary)
 
@@ -144,3 +144,10 @@ print(f"Training Accuracy: {train_accuracy:.4f}")
 # More detailed metrics
 print(classification_report(Y_train, Y_train_pred))
 print("Training Confusion Matrix:\n", confusion_matrix(Y_train, Y_train_pred))
+
+"""Save the trained model for model deployment"""
+import joblib
+
+# Save the trained model at the desired path
+joblib.dump(model, '/path_to_model/model.pkl')  # --> Change to your path
+joblib.dump(mlb, '/path_to_mlb/mlb.pkl')        # --> Change to your path
