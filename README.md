@@ -1,6 +1,6 @@
 # Predicting Adverse Effects of Drug Interactions
 
-Achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stack ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
+We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stack ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
 
 ## Problem Statement <!--- do not change this line -->
 
@@ -27,6 +27,21 @@ FDA FAERS dataset spanning 2014Q3-2024Q3: [High-Order Drug-Drug Interaction Data
 - Git
 - pandas
 - gradio
+
+## Usage Instruction <!--- do not change this line -->
+1. Download or load the dataset from [HODDI](https://github.com/TIML-Group/HODDI).
+2. Modify model.py with your specific data path and save results to your designated directory.
+```
+python /path_to_model/model.py
+```
+3. Run the web_app.py with the saved pre-trained model.
+```
+python /path_to_web_app/web_app.py
+```
+
+## Contribution Guidelines <!--- do not change this line -->
+
+We invite the community to continue building this project to improve our model and web application. Please fork this repository if you'd like to make any changes and submit a pull request. Your changes may be merged into the main branch after review.
 
 ## Authors <!--- do not change this line -->
 
