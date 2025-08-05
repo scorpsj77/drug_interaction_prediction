@@ -1,6 +1,14 @@
-"""Load datasets"""
-
 import pandas as pd
+import ast
+import joblib
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, StackingClassifier
+from catboost import CatBoostClassifier
+from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, accuracy_score
+
+"""Load datasets"""
 
 # Load the positive and negative drug interactions datasets from HODDI
 neg = 'path_to_neg_interaction_dataset'  # --> Change to your path
@@ -21,12 +29,7 @@ dfp.drop(['time', 'row_index', 'SE_above_0.9'], axis=1, inplace=True)
 # Change the target label for negative drug interactions to 0 to
 dfn.replace({'hyperedge_label': {-1: 0}}, inplace=True)
 
-"""# Prepare the Data
-
-Splitting the dataset
-"""
-
-from sklearn.model_selection import train_test_split
+"""Splitting the dataset"""
 
 # Split: 80% train, 20% test
 # Split positives
@@ -39,8 +42,6 @@ train_combined = pd.concat([dfp_train, dfn_train]).sample(frac=1, random_state=4
 test_combined = pd.concat([dfp_test, dfn_test]).sample(frac=1, random_state=42)
 
 """Converting all DrugBank IDs to a list"""
-
-import ast
 
 def convert_string_to_list(s):
     if isinstance(s, str):
@@ -71,24 +72,10 @@ print(train_combined['DrugBankID'].explode().isin(unknown_ids).any())
 print(test_combined['DrugBankID'].explode().isin(unknown_ids).any())
 test_combined.shape
 
-"""# ML
+"""Stacking Ensemble Model"""
 
-Load necessary packages to set up the model
-"""
-
-!pip install catboost
-
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 # Store true labels
 Y_true = test_combined['hyperedge_label'].values
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, StackingClassifier
-from catboost import CatBoostClassifier
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
-
-"""Train and test the stack ensemble model of Logistic Regression, Random Forest, and CatBoost"""
 
 # Create and fit the MultiLabelBinarizer
 mlb = MultiLabelBinarizer(sparse_output=True)
@@ -136,8 +123,6 @@ print("ROC AUC:", roc_auc_score(Y_true, Y_prob))
 Y_train_pred = model.predict(X_train)
 
 # Calculate accuracy
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
 train_accuracy = accuracy_score(Y_train, Y_train_pred)
 print(f"Training Accuracy: {train_accuracy:.4f}")
 
@@ -146,8 +131,6 @@ print(classification_report(Y_train, Y_train_pred))
 print("Training Confusion Matrix:\n", confusion_matrix(Y_train, Y_train_pred))
 
 """Save the trained model for model deployment"""
-import joblib
-
 # Save the trained model at the desired path
 joblib.dump(model, '/path_to_model/model.pkl')  # --> Change to your path
 joblib.dump(mlb, '/path_to_mlb/mlb.pkl')        # --> Change to your path
