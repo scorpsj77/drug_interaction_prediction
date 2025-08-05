@@ -1,6 +1,6 @@
 # Predicting Adverse Effects of Drug Interactions
 
-We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stack ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
+We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stacking ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
 
 ## Problem Statement <!--- do not change this line -->
 
@@ -15,7 +15,7 @@ Adverse drug interactions (ADIs) are a leading cause of preventable harm in heal
 
 ## Methodologies <!--- do not change this line -->
 
-To accomplish this, we cleaned the dataset, trained a stack ensemble model with Logistic Regression, Random Forest, and CatBoost, and applied 5-fold cross-validation to avoid overfitting. We then developed a web application using Gradio by passing in the dataset and making live predictions using the pre-trained model.
+To accomplish this, we cleaned the dataset, trained a stacking ensemble model with Logistic Regression, Random Forest, and CatBoost, and applied 5-fold cross-validation to avoid overfitting. We then developed a web application using Gradio by passing in the dataset and making live predictions using the pre-trained model.
 
 ## Data Sources <!--- do not change this line -->
 
