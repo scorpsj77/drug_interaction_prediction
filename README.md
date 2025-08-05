@@ -38,7 +38,11 @@ pip install catboost
 ```
 python /path_to_model/model.py
 ```
-3. Run the web_app.py with the saved pre-trained model.
+4. Install the gradio package in your terminal or command prompt.
+```
+pip install gradio
+```
+5. Run the web_app.py with the saved pre-trained model.
 ```
 python /path_to_web_app/web_app.py
 ```
