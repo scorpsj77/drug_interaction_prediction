@@ -30,7 +30,11 @@ FDA FAERS dataset spanning 2014Q3-2024Q3: [High-Order Drug-Drug Interaction Data
 
 ## Usage Instruction <!--- do not change this line -->
 1. Download or load the dataset from [HODDI](https://github.com/TIML-Group/HODDI).
-2. Modify model.py with your specific data path and save results to your designated directory.
+2. Install the CatBoost Python package in your terminal or command prompt.
+```
+pip install catboost
+```
+3. Modify model.py with your specific data path and save results to your designated directory.
 ```
 python /path_to_model/model.py
 ```
@@ -41,7 +45,14 @@ python /path_to_web_app/web_app.py
 
 ## Contribution Guidelines <!--- do not change this line -->
 
-We invite the community to continue building this project to improve our model and web application. Please fork this repository if you'd like to make any changes and submit a pull request. Your changes may be merged into the main branch after review.
+We welcome contributions to improve both the model and the web application!
+
+To contribute:
+- Fork this repository
+- Make your changes
+- Submit a pull request
+
+Your contributions will be reviewed and may be merged into the main branch. Thank you for helping us make this project better!
 
 ## Authors <!--- do not change this line -->
 
@@ -55,5 +66,6 @@ This project was completed in collaboration with:
 
 Thank you to:
 - Marilu Duque, the AI4ALL Class 13 Instructor, for teaching us the necessary skills and ethical considerations in creating this project,
-- Ankush Rastogi, our project mentor, for providing useful suggestions on developing and deploying our model, and
-- AI4ALL Ignite program, for providing the opportunity for us to learn and apply AI to an impactful real-world problem.
+- Ankush Rastogi, our project mentor, for providing useful suggestions on developing and deploying our model,
+- Sai Donepudi, the AI4ALL Class 13 Teaching Fellow, for offering helpful tips on developing our project, and
+- AI4ALL Ignite program, for providing the opportunity for us to learn and apply AI to an impactful real-world problem, especially to be aware of AI ethics.
