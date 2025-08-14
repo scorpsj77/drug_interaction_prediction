@@ -1,4 +1,4 @@
-# Predicting Adverse Effects of Drug Interactions
+# MediGuard: Predicting the Adverse Effects of Drug Interactions
 
 We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stacking ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
 
@@ -28,7 +28,11 @@ FDA FAERS dataset spanning 2014Q3-2024Q3: [High-Order Drug-Drug Interaction Data
 - pandas
 - gradio
 
-## Usage Instruction <!--- do not change this line -->
+## Hugging Face Deployment
+You can run the project directly in your browser here: [Try it on Hugging Face](https://huggingface.co/spaces/scorpsj77/drug-interaction-predictor)
+
+## Instructions to Run Locally <!--- do not change this line -->
+Follow these steps if you would like to run the project on your own machine:
 1. Download or load the dataset from [HODDI](https://github.com/TIML-Group/HODDI).
 2. Install the CatBoost Python package in your terminal or command prompt.
 ```
