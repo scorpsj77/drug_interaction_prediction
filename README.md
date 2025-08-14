@@ -1,4 +1,4 @@
-# Predicting Adverse Effects of Drug Interactions
+# MediGuard - Predicting Adverse Effects of Drug Interactions
 
 We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stacking ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
 
