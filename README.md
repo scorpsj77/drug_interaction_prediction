@@ -2,6 +2,10 @@
 
 We achieved 98% accuracy in predicting unsafe drug combinations by utilizing a stacking ensemble model with Logistic Regression, Random Forest, and CatBoost on the 2014-2024 U.S. Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) dataset, all while demonstrating the model in a Gradio web application for more convenient usage. This project is developed by Class 13B of the 2025 AI4ALL Ignite Program.
 
+### Web App
+You can run the project directly in your browser here: [Try it on Hugging Face](https://huggingface.co/spaces/scorpsj77/drug-interaction-predictor)
+![image alt](https://github.com/scorpsj77/drug_interaction_prediction/blob/main/web_app_image.png?raw=true)
+
 ## Problem Statement <!--- do not change this line -->
 
 Adverse drug interactions (ADIs) are a leading cause of preventable harm in healthcare. According to the FDA, in 2022, there were over 1.25 million serious adverse events reported and nearly 175,000 deaths. Manually identifying unsafe drug combinations is impractical due to the vast number of possible interactions and hidden risk patterns. Hence, to address this problem, our team leverages machine learning to accurately predict unsafe drug combinations and thus improve prescription safety.
@@ -27,9 +31,6 @@ FDA FAERS dataset spanning 2014Q3-2024Q3: [High-Order Drug-Drug Interaction Data
 - Git
 - pandas
 - gradio
-
-## Hugging Face Deployment
-You can run the project directly in your browser here: [Try it on Hugging Face](https://huggingface.co/spaces/scorpsj77/drug-interaction-predictor)
 
 ## Instructions to Run Locally <!--- do not change this line -->
 Follow these steps if you would like to run the project on your own machine:
